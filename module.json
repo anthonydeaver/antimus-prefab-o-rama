@@ -11,15 +11,7 @@
 	],
 	"styles": [
 	],
-	"packs": [
-    {
-      "name": "journals",
-      "label": "Ants Town Journal",
-      "path": "/packs/antsprefab-journals.db",
-      "entity": "JournalEntry"
-    }
-
-	],
+	"packs": [],
 	"languages": [
 		{
 			"name": "English", 
