@@ -2,7 +2,7 @@
 	//This has to be the name field from your module.json
 	const moduleName = "ants-prefab-buildings";
 	//This should correlate to the title field from your module.json so the user knows from where the compendium is
-	const moduleLabel = "Ant's Prefab Buildings";
+	const moduleLabel = "Ants Prefab Buildings";
 	//This should contain all your json compendiums
 	const compendiumList =[
 		"import_packs/buildings.json"
@@ -10,8 +10,35 @@
 	//This should be the system in which you created the original compendium, in case you want to distribute that aswell in your module otherwise make it blank
 	const ignoreSystem = "dnd5e";
 	//This should be the first part of your localization stringIds in the localization files in .\languages\ 
-	const moduleLocalizationScope = "TOKENATTACHEREXAMPLECOMPENDIUM";
+	const moduleLocalizationScope = "ANTPREFABCOMPENDIUM";
 
+	/**
+	 * welcomeJournal (if set) will automatically be imported and opened after the first activation of a scene imported from the module compendium.
+	 * Set to the following to disable:
+	 *   const welcomeJournal = '';
+	 */
+	const welcomeJournal = '01 Modular Town';
+	 /**
+		* additionalJournals will automatically be imported.
+		* Set to the following to disable:
+		*   const additionalJournals = [];
+		*/
+	const additionalJournals = [];
+	 /**
+		* creaturePacks is a list of compendium packs to look in for Actors by name (in prioritised order).
+		* The first entry here assumes that you have an Actor pack in your module with the "name" of "actors".
+		* Set to the following to disable:
+		*   const creaturePacks = [];
+		*/
+	const creaturePacks = [`${moduleName}.actors`, 'dnd5e.monsters'];
+	 /**
+		* journalPacks is a list of compendium packs to look in for Journals by name (in prioritised order).
+		* The first entry here assumes that you have a Journal pack in your module with the "name" of "journals".
+		* Set to the following to disable:
+		*   const journalPacks = [];
+		*/
+	const journalPacks = [`${moduleName}.journals`];
+ 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//Nothing past this point needs to be changed, in theory at least
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -137,7 +164,8 @@
 			if(parsed.hasOwnProperty("compendium")){
 				const pack = await game.packs.get(`world.${moduleName}.${parsed.compendium.name}`);
 				if(pack){
-					await pack.delete();
+					await pack.configure({locked: false});
+					await pack.deleteCompendium();
 				}
 			}
 		}
@@ -147,12 +175,36 @@
 	async function forceReimport(){
 		await game.settings.set(moduleName, "imported", false);
 		await game.settings.set(moduleName, "module-version", game.modules.get(moduleName).data.version - 1);
-		return ui.notifications.info("Delete old compendiums and refresh the page wtih F5!");
+		return ui.notifications.info("Delete old compendiums and refresh the page with F5!");
 
 	}
 
 	async function forceUpdate(){
 		await game.settings.set(moduleName, "module-version", game.modules.get(moduleName).data.version - 1);
-		return ui.notifications.info("Refresh the page wtih F5!");		
+		return ui.notifications.info("Refresh the page with F5!");
 	}
+
+	Hooks.once('scenePackerReady', ({ getInstance }) => {
+		// Initialise the Scene Packer with your adventure name and module name
+		let packer = getInstance(moduleLabel, moduleName);
+		if (creaturePacks.length) {
+			packer.SetCreaturePacks(creaturePacks);
+		}
+		if (journalPacks.length) {
+			packer.SetJournalPacks(journalPacks);
+		}
+		if (welcomeJournal) {
+			packer.SetWelcomeJournal(welcomeJournal);
+		}
+		if (additionalJournals.length) {
+			packer.SetAdditionalJournalsToImport(additionalJournals);
+		}
+			});
+// 	Hooks.once("ready", async function () {
+// 		if(game.moulinette) {
+// 		game.moulinette.sources.push({ type: "tiles", publisher: "Anthony Deaver", pack: "Towns Pack Tiles", source: "data", path: "modules/ants-prefab-buildings" })
+	
+//   }
+// });
+
 })();

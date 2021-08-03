@@ -4,16 +4,25 @@
 	"description": "Ants Prefab Buildings",
 	"version": "1.0.0",
 	"minimumCoreVersion": "0.7.0",
-	"compatibleCoreVersion": "0.7.9",
+	"compatibleCoreVersion": "0.8.8",
 	"author": "anthony",
 	"scripts": [
 		"scripts/compendium-import.js"
 	],
 	"styles": [
 	],
-	"packs": [],
+	"packs": [
+    {
+      "name": "journals",
+      "label": "Ants Town Journal",
+      "path": "/packs/antsprefab-journals.db",
+      "entity": "JournalEntry"
+    }
+
+	],
 	"languages": [
 		{
+			"name": "English",
 			"lang": "en",
 			"path": "languages/en.json"
 		}
@@ -27,6 +36,5 @@
 	"socket": false,
 	"url": "https://github.com/anthonydeaver/ants-prefab-buildings",
   "manifest": "https://raw.githubusercontent.com/anthonydeaver/ants-prefab-buildings/master/module.json",
-  "download": "https://github.com/anthonydeaver/ants-prefab-buildings/releases/download/v1.0.0/v1.0.0.zip",
-  "readme": "https://github.com/anthonydeaver/ants-prefab-buildings/blob/v1.0.0/README.md"
+  "download": "https://github.com/anthonydeaver/ants-prefab-buildings/releases/download/v1.0.0/v1.0.0.zip"
 }
