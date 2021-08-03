@@ -22,7 +22,7 @@
 	],
 	"languages": [
 		{
-			"name": "English",
+			"name": "English", 
 			"lang": "en",
 			"path": "languages/en.json"
 		}
