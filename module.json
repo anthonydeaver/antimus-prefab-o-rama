@@ -17,8 +17,20 @@
       "label": "Ants Town Journal",
       "path": "/packs/antsprefab-journals.db",
       "entity": "JournalEntry"
+    },
+    {
+      "name": "maps",
+      "label": "Prefab Scenes",
+      "path": "/packs/scenes.db",
+      "entity": "Scene"
+    },
+    {
+      "name": "actors",
+      "label": "Prefab Buildings",
+      "path": "/packs/actors.db",
+      "entity": "Actor",
+      "system": "dnd5e"
     }
-
 	],
 	"languages": [
 		{

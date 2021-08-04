@@ -1,0 +1,266 @@
+{
+  "name": "nkl",
+  "active": false,
+  "navigation": false,
+  "navOrder": 0,
+  "navName": "",
+  "width": 4000,
+  "height": 3000,
+  "padding": 0.25,
+  "initial": null,
+  "backgroundColor": "#999999",
+  "gridType": 1,
+  "grid": 100,
+  "shiftX": 0,
+  "shiftY": 0,
+  "gridColor": "#000000",
+  "gridAlpha": 0.2,
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "tokenVision": true,
+  "fogExploration": true,
+  "fogReset": null,
+  "globalLight": false,
+  "globalLightThreshold": null,
+  "darkness": 0,
+  "drawings": [],
+  "tokens": [
+    {
+      "_id": "6Dl6EvDFsPlsfsYd",
+      "name": "#[CF_tempEntity]",
+      "displayName": 20,
+      "actorId": "uRVnYRLDDPDEB30U",
+      "actorLink": true,
+      "actorData": {},
+      "img": "icons/svg/mystery-man.svg",
+      "width": 1,
+      "height": 1,
+      "scale": 1,
+      "mirrorX": false,
+      "mirrorY": false,
+      "x": 2100,
+      "y": 1400,
+      "elevation": 0,
+      "lockRotation": false,
+      "rotation": 0,
+      "effects": [],
+      "alpha": 1,
+      "hidden": false,
+      "vision": true,
+      "dimSight": 0,
+      "brightSight": 0,
+      "dimLight": 0,
+      "brightLight": 0,
+      "sightAngle": 0,
+      "lightAngle": 0,
+      "lightAlpha": 0.25,
+      "lightAnimation": {
+        "speed": 5,
+        "intensity": 5
+      },
+      "disposition": 1,
+      "displayBars": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "bar2": {
+        "attribute": null
+      },
+      "flags": {}
+    },
+    {
+      "_id": "6mvmtSkq4PBCHcT8",
+      "name": "House",
+      "displayName": 0,
+      "actorId": "pe0MuajSdyoEvhSg",
+      "actorLink": false,
+      "actorData": {},
+      "img": "icons/svg/mystery-man.svg",
+      "width": 1,
+      "height": 1,
+      "scale": 1,
+      "mirrorX": false,
+      "mirrorY": false,
+      "x": 4100,
+      "y": 2000,
+      "elevation": 0,
+      "lockRotation": false,
+      "rotation": 0,
+      "effects": [],
+      "alpha": 1,
+      "hidden": false,
+      "vision": false,
+      "dimSight": 0,
+      "brightSight": 0,
+      "dimLight": 0,
+      "brightLight": 0,
+      "sightAngle": 0,
+      "lightAngle": 0,
+      "lightAlpha": 0.25,
+      "lightAnimation": {
+        "speed": 5,
+        "intensity": 5
+      },
+      "disposition": -1,
+      "displayBars": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "bar2": {
+        "attribute": null
+      },
+      "flags": {
+        "token-attacher": {
+          "pos": {
+            "base_id": "6mvmtSkq4PBCHcT8",
+            "xy": {
+              "x": 3600,
+              "y": 1000
+            },
+            "center": {
+              "x": 3650,
+              "y": 1050
+            },
+            "rotation": 0,
+            "hidden": false
+          },
+          "attached": {
+            "Tile": [
+              "D68PiySKXseJDIJT",
+              "4joGyl4eDXQhc19I"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "lights": [],
+  "notes": [],
+  "sounds": [],
+  "templates": [],
+  "tiles": [
+    {
+      "_id": "D68PiySKXseJDIJT",
+      "img": "tiles/Custom/building.webp",
+      "width": 1700,
+      "height": 1400,
+      "x": 2150,
+      "y": 1900,
+      "z": 1,
+      "rotation": 0,
+      "alpha": 1,
+      "hidden": false,
+      "locked": false,
+      "overhead": false,
+      "occlusion": {
+        "mode": 1,
+        "alpha": 0
+      },
+      "video": {
+        "loop": true,
+        "autoplay": true,
+        "volume": 0
+      },
+      "flags": {
+        "token-attacher": {
+          "parent": "6mvmtSkq4PBCHcT8",
+          "offset": {
+            "x": -2000,
+            "y": -150,
+            "rot": 0,
+            "centerX": -1150,
+            "centerY": 550,
+            "offRot": 0,
+            "size": {
+              "width": 1700,
+              "height": 1400,
+              "widthBase": 1,
+              "heightBase": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "_id": "4joGyl4eDXQhc19I",
+      "img": "tiles/Custom/roof.webp",
+      "width": 1700,
+      "height": 1400,
+      "x": 2150,
+      "y": 1900,
+      "z": 2,
+      "rotation": 0,
+      "alpha": 1,
+      "hidden": false,
+      "locked": false,
+      "overhead": false,
+      "occlusion": {
+        "mode": 1,
+        "alpha": 0
+      },
+      "video": {
+        "loop": true,
+        "autoplay": true,
+        "volume": 0
+      },
+      "flags": {
+        "token-attacher": {
+          "parent": "6mvmtSkq4PBCHcT8",
+          "offset": {
+            "x": -2000,
+            "y": -150,
+            "rot": 0,
+            "centerX": -1150,
+            "centerY": 550,
+            "offRot": 0,
+            "size": {
+              "width": 1700,
+              "height": 1400,
+              "widthBase": 1,
+              "heightBase": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "walls": [],
+  "playlist": null,
+  "playlistSound": null,
+  "journal": null,
+  "weather": "",
+  "sort": 0,
+  "flags": {
+    "token-attacher": {
+      "attach_base": {
+        "type": "Token",
+        "element": "0Txa2sxaX0QGXjYt"
+      }
+    },
+    "ants-prefab-buildings": {
+      "scene-journal": {},
+      "scene-position": null,
+      "tokens": [
+        {
+          "sourceId": "Actor.RtgfCRj33SRK99Rc",
+          "compendiumSourceId": "Actor.bbYmw3wG5Jheg8N2",
+          "tokenName": "House",
+          "actorName": "Control Token (Copy)",
+          "x": 3600,
+          "y": 1000
+        }
+      ]
+    },
+    "scene-packer": {
+      "source-module": "ants-prefab-buildings",
+      "packed-with-version": "2.3.1",
+      "sourceId": "Scene.3CjhtZ7WCalEbd43"
+    },
+    "exportSource": {
+      "world": "test-world",
+      "system": "dnd5e",
+      "coreVersion": "0.8.8",
+      "systemVersion": "1.4.1"
+    }
+  }
+}
